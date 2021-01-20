@@ -13,4 +13,14 @@
 
     // your code here
 
+    let positive;
+
+do{
+    let age=prompt("Age?");
+    let gender=prompt("Gender?");
+    let town=prompt("Town?");
+
+    positive=confirm(age+"\n"+ gender+"\n"+ town);
+} while (positive!==true);
+
 })();

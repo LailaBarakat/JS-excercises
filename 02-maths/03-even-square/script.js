@@ -13,8 +13,12 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
+        let output = "0: 0\n";
         // your code here
-
+        for(let i = 1 ; i <= 21 ; i++ ){
+            output = output + i + ": " + i*i + "\n";
+        }
+        alert(output);
     });
 
 })();

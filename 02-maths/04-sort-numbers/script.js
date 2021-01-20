@@ -16,7 +16,20 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        let numbers=document.getElementById('numbers').value; // "2, 4, 14, .."
 
+        // convert string to list of strings (split())
+        let numberArray=numbers.split(', ')  // ["2", "4", "14", ..]
+
+        // and convert each to a Number (map(Number))
+        numberArray = numberArray.map(Number); // [2, 4, 14, ...]
+
+        // sort the array not alphabetically, but numerically by adding that compare function
+        numberArray.sort(function(a, b) {
+            return a - b;
+        })
+
+        alert(numberArray);
     });
 
 })();
