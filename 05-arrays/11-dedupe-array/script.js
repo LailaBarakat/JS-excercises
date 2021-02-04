@@ -30,10 +30,13 @@
 
     // your code here
 
-    uniqueArray = fruits.filter(function(item, pos) {
-        return fruits.indexOf(item) == pos;
 
+    document.getElementById("run").addEventListener("click", function (){
+        uniqueArray = fruits.filter(function(item, pos) {
+            return fruits.indexOf(item) == pos;
+
+        })
+        console.log(uniqueArray)
     })
-    console.log(uniqueArray)
 
 })();
