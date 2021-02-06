@@ -11,4 +11,19 @@
 
 (() => {
     // your code here
+
+    document.getElementById("run").addEventListener("click", function (){
+        async function GetArticles(){
+            let articlesPromise = window.lib.getPosts()
+            let articles = await articlesPromise
+            for (let article of articles){
+                let commentsPromise = window.lib.getComments(article.id)
+                let comment = await commentsPromise
+                article.comments = comment
+                console.log(article)
+            }
+        }
+
+        GetArticles()
+    })
 })();
